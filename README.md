@@ -11,7 +11,7 @@ BOSS dependency manager for Delphi and Lazarus installation:
  * (Optional) Install a [Boss Delphi IDE complement](https://github.com/hashload/boss-ide)
 
 ### > Update
-This command update installed dependencies
+This command update installed dependencies. Must be executed on folder (src\) where is located boss.json 
 ```
 boss update
 ```
