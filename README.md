@@ -22,29 +22,43 @@ boss update
 
 #### > Payload examples
 
-```json
+------------
 127.0.0.1:9000/api/login
+```json
 {
   "name": "prova",
   "username": "prova",
   "password": "seventh"
 }
+```
+
+------------
+
 
 127.0.0.1:9000/api/servers
+```json
 {
   "id": "{FC7D04A5-9AE1-43EE-B4F3-67D2C133E2E5}",
   "name": "Servidor 1",
   "ip": "127.0.0.1",
   "port": 9000
 }
+```
 
+------------
 127.0.0.1:9000/api/servers/:server_id/videos
+```json
 {
   "description": "Video 1"
 }
+```
 
+------------
 127.0.0.1:9000/api/servers/:server_id/videos
+```json
 {
     "content": ""
 }
 ```
+
+------------
