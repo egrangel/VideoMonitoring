@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D4AB094C-1407-47DA-8F93-2B04BA00EE93}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="VideoMonitoring.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="test\src\VideoMonitoringTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VideoMonitoring">
+        <MSBuild Projects="VideoMonitoring.dproj"/>
+    </Target>
+    <Target Name="VideoMonitoring:Clean">
+        <MSBuild Projects="VideoMonitoring.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VideoMonitoring:Make">
+        <MSBuild Projects="VideoMonitoring.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VideoMonitoringTests">
+        <MSBuild Projects="test\src\VideoMonitoringTests.dproj"/>
+    </Target>
+    <Target Name="VideoMonitoringTests:Clean">
+        <MSBuild Projects="test\src\VideoMonitoringTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VideoMonitoringTests:Make">
+        <MSBuild Projects="test\src\VideoMonitoringTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VideoMonitoring;VideoMonitoringTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VideoMonitoring:Clean;VideoMonitoringTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VideoMonitoring:Make;VideoMonitoringTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
