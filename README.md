@@ -17,5 +17,34 @@ boss update
 ```
 
 
-##### So, this is it! Now the project can be compiled!
+##### So, that's it! Now the project can be compiled!
 
+
+#### > Payload examples
+
+```json
+127.0.0.1:9000/api/login
+{
+  "name": "prova",
+  "username": "prova",
+  "password": "seventh"
+}
+
+127.0.0.1:9000/api/servers
+{
+  "id": "{FC7D04A5-9AE1-43EE-B4F3-67D2C133E2E5}",
+  "name": "Servidor 1",
+  "ip": "127.0.0.1",
+  "port": 9000
+}
+
+127.0.0.1:9000/api/servers/:server_id/videos
+{
+  "description": "Video 1"
+}
+
+127.0.0.1:9000/api/servers/:server_id/videos
+{
+    "content": ""
+}
+```
