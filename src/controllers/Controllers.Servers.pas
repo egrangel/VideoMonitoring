@@ -86,8 +86,6 @@ begin
 end;
 
 procedure Registry;
-var
-  Config: TConfigLogin;
 begin
   THorse
     .AddCallback(Authorization())
