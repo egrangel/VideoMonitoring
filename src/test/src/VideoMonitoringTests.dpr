@@ -15,7 +15,8 @@ program VideoMonitoringTests;
 {$ENDIF}
 
 uses
-  DUnitTestRunner;
+  DUnitTestRunner,
+  TestServices.Servers in 'TestServices.Servers.pas';
 
 {$R *.RES}
 

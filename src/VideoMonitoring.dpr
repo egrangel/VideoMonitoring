@@ -22,11 +22,13 @@ uses
   Services.Recycler in 'services\Services.Recycler.pas',
   Controllers.Users in 'controllers\Controllers.Users.pas',
   Providers.Authorization in 'providers\Providers.Authorization.pas',
-  Configs.Login in 'configs\Configs.Login.pas';
+  Configs.Login in 'configs\Configs.Login.pas',
+  Services.Users in 'services\Services.Users.pas' {ServiceUsers: TDataModule},
+  Providers.Encrypt in 'providers\Providers.Encrypt.pas',
+  Configs.Encrypt in 'configs\Configs.Encrypt.pas';
 
 var
   LLogFileConfig: THorseLoggerConsoleConfig;
-  Config: TConfigLogin;
 
 begin
   LLogFileConfig := THorseLoggerConsoleConfig.New
@@ -38,7 +40,6 @@ begin
     .Use(THorseLoggerManager.HorseCallback)
     .Use(Jhonson)
     .Use(OctetStream)
-    .Use(HorseJWT(Config.Secret))
     .Use(HandleException);
 
   Controllers.Users.Registry;

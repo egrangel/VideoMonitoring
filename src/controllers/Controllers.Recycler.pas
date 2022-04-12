@@ -4,7 +4,7 @@ interface
 
 uses
   Horse, Services.Recycler, System.Classes, System.JSON, System.SysUtils,
-  System.Threading;
+  System.Threading, Providers.Authorization, Configs.Login;
 
 procedure Registry;
 
@@ -52,7 +52,9 @@ end;
 procedure Registry;
 begin
   THorse
+    .AddCallback(Authorization())
     .Post('/api/recycler/process/:days',DoPostRecycler)
+    .AddCallback(Authorization())
     .Get('/api/recycler/status',DoStatusRecycler);
 end;
 

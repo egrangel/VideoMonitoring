@@ -5,7 +5,7 @@ interface
 
 uses
   Horse, Services.Videos, System.JSON, Ragna, System.SysUtils, System.Classes,
-  System.NetEncoding;
+  System.NetEncoding, Providers.Authorization, Configs.Login;
 
 procedure Registry;
 
@@ -133,13 +133,21 @@ begin
 end;
 
 procedure Registry;
+var
+  Config: TConfigLogin;
 begin
   THorse
+    .AddCallback(Authorization())
     .Post('/api/servers/:server_id/videos',DoPostVideo)
+    .AddCallback(Authorization())
     .Get('/api/servers/:server_id/videos',DoGetVideoByServer)
+    .AddCallback(Authorization())
     .Get('/api/servers/:server_id/videos/:video_id',DoGetVideoById)
+    .AddCallback(Authorization())
     .Get('/api/servers/:server_id/videos/:video_id/binary',DoGetVideoBinary)
+    .AddCallback(Authorization())
     .Patch('/api/servers/:server_id/videos/:video_id/binary',DoPatchVideo)
+    .AddCallback(Authorization())
     .Delete('/api/servers/:server_id/videos/:video_id',DoDeleteVideo);
 end;
 
