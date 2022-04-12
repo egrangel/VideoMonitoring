@@ -26,9 +26,9 @@ boss update
 POST 127.0.0.1:9000/api/login
 ```json
 {
-  "name": "prova",
-  "username": "prova",
-  "password": "seventh"
+  "name": "yourname",
+  "username": "yourusername",
+  "password": "yourpassword"
 }
 ```
 
@@ -39,7 +39,7 @@ POST 127.0.0.1:9000/api/servers
 ```json
 {
   "id": "{FC7D04A5-9AE1-43EE-B4F3-67D2C133E2E5}",
-  "name": "Servidor 1",
+  "name": "Server 1",
   "ip": "127.0.0.1",
   "port": 9000
 }
