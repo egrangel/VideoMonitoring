@@ -23,7 +23,7 @@ boss update
 #### > Payload examples
 
 ------------
-127.0.0.1:9000/api/login
+POST 127.0.0.1:9000/api/login
 ```json
 {
   "name": "prova",
@@ -35,7 +35,7 @@ boss update
 ------------
 
 
-127.0.0.1:9000/api/servers
+POST 127.0.0.1:9000/api/servers
 ```json
 {
   "id": "{FC7D04A5-9AE1-43EE-B4F3-67D2C133E2E5}",
@@ -46,7 +46,7 @@ boss update
 ```
 
 ------------
-127.0.0.1:9000/api/servers/:server_id/videos
+POST 127.0.0.1:9000/api/servers/:server_id/videos
 ```json
 {
   "description": "Video 1"
@@ -54,7 +54,7 @@ boss update
 ```
 
 ------------
-127.0.0.1:9000/api/servers/:server_id/videos
+PATCH 127.0.0.1:9000/api/servers/:server_id/videos/:video_id
 ```json
 {
     "content": ""
