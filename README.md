@@ -15,13 +15,11 @@ This command update installed dependencies. Must be executed on folder (src\) wh
 ```
 boss update
 ```
+####  So, that's it! Now the project can be compiled!
 
-
-##### So, that's it! Now the project can be compiled!
-
+[========]
 
 #### > Payload examples
-
 ------------
 POST 127.0.0.1:9000/api/login
 ```json
