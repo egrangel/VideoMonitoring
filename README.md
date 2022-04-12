@@ -5,7 +5,7 @@ This is a Delphi REST API example, using [HashLoad]( https://github.com/HashLoad
 Source code was created on Delphi Rio (10.3).
 
 ### Getting started
-BOSS dependency mannager for Delphi and Lazarus installation: 
+BOSS dependency manager for Delphi and Lazarus installation: 
  * Download [setup](https://github.com/hashload/boss/releases)
  * Just type `boss` in cmd
  * (Optional) Install a [Boss Delphi IDE complement](https://github.com/hashload/boss-ide)
