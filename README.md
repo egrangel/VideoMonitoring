@@ -1,6 +1,6 @@
 # Description
 
-This is a REST API example, using [HashLoad]( https://github.com/HashLoad "HashLoad") components.
+This is a Delphi REST API example, using [HashLoad]( https://github.com/HashLoad "HashLoad") components.
 
 Source code was created on Delphi Rio (10.3).
 
